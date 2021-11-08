@@ -30,6 +30,14 @@ class ImageUploadController extends Controller
         $imageName = time().'.'.$request->image->extension();  
    
         $request->image->move(public_path('images'), $imageName);
+
+
+        $data =[
+            'user_id'=>$request->input('user_id'),
+            'title'=>$request->input('title')
+        ];
+        DB::table('receipts')->insert($data);
+
    
         return back()
             ->with('success','You have successfully upload image.')

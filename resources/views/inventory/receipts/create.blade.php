@@ -29,9 +29,16 @@
             @csrf
             <div class="row">
   
+            <div class="col-md-6">
+                    <input type="text" name="user_id" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="fitextle" name="title" class="form-control">
+                </div>
                 <div class="col-md-6">
                     <input type="file" name="image" class="form-control">
                 </div>
+
    
                 <div class="col-md-6">
                     <button type="submit" class="btn btn-success">Upload</button>
